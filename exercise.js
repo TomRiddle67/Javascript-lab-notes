@@ -1,25 +1,14 @@
-class Car {
-    constructor(brand, color) {
-        this.brand = brand;
-        this.color = color;
-    }
 
-    honk = () => {
-        return `${this.brand} goes beep!`;
-    }
+// String methods
 
-    describe = () => {
-        return `That is my ${this.brand}, it is ${this.color}`;
-    }
+let quote = "I think, therefore i am";
 
-    repaint = (newColor) => {
-        this.color = newColor;
-        return `${this.brand} is now ${this.color}`;
-    }
-}
+console.log(quote.toUpperCase());
+console.log(quote.includes("i am"));
+console.log(quote.indexOf("i am"));
+console.log(quote.startsWith("i am"));
+console.log(quote.endsWith("i am"));
+console.log(quote.replace("i am", "i become"));
+console.log(quote.length);
 
-const myCar = new Car("Tesla", "Red");
-console.log(`This ${myCar.brand} is ${myCar.color} in color`);
-console.log(myCar.honk());
-console.log(myCar.describe());
-console.log(myCar.repaint("Blue"));
+
