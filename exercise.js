@@ -1,14 +1,14 @@
+// user input to check age
+import {createInterface} from "readline";
 
-// String methods
-
-let quote = "I think, therefore i am";
-
-console.log(quote.toUpperCase());
-console.log(quote.includes("i am"));
-console.log(quote.indexOf("i am"));
-console.log(quote.startsWith("i am"));
-console.log(quote.endsWith("i am"));
-console.log(quote.replace("i am", "i become"));
-console.log(quote.length);
+const checkBirthYear = createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 
+checkBirthYear.question("What year were you born?: ", (birthYear) => {
+    let age = 2026 - parseInt(birthYear)
+    console.log(`You are ${age} years old`);
+    checkBirthYear.close();
+});

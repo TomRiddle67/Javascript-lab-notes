@@ -1,0 +1,21 @@
+{
+  "name": "javascript-labs",
+  "version": "1.0.0",
+  "description": "Hello world code",
+  "main": "exercise.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomRiddle67/Javascript-lab-notes.git"
+  },
+  "keywords": [],
+  "author": "Tom Riddle",
+  "license": "Avada Kedavra",
+  "bugs": {
+    "url": "https://github.com/TomRiddle67/Javascript-lab-notes/issues"
+  },
+  "homepage": "https://github.com/TomRiddle67/Javascript-lab-notes#readme"
+}
