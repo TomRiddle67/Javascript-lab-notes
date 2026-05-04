@@ -1,14 +1,26 @@
-// user input to check age
-import {createInterface} from "readline";
+// calculate total cost
+const order = [
 
-const checkBirthYear = createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    {'item': 'shirt', 'price': 20, 'quantity': 2},
+    {'item': 'jeans', 'price': 40, 'quantity': 1},
+    {'item': 'cap', 'price': 10, 'quantity': 3}
 
+]
 
-checkBirthYear.question("What year were you born?: ", (birthYear) => {
-    let age = 2026 - parseInt(birthYear)
-    console.log(`You are ${age} years old`);
-    checkBirthYear.close();
-});
+const processOrders = (order) =>{
+   if (!order || order.length === 0) {
+    return {"error": "No orders"};
+   }
+
+   let total = 0;
+
+   for (const item of order) {
+    if (item.price < 0 || item.quantity < 0) {
+        return {"error": "Invalid Order"};
+    } 
+    total += item.price * item.quantity;
+   }
+   return total;
+}
+processOrders()
+console.log(processOrders(order))
