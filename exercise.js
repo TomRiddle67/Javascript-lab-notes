@@ -20,7 +20,19 @@ const processOrders = (order) =>{
     } 
     total += item.price * item.quantity;
    }
-   return total;
+
+
+   // apply discount
+
+    let discount = total > 50 ? total * 0.10 : 0;
+    total -= discount;
+
+    return {
+        discount: discount.toFixed(2),
+        total: total.toFixed(2)
+    }
 }
+
 processOrders()
 console.log(processOrders(order))
+
