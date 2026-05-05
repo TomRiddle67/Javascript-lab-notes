@@ -27,11 +27,16 @@ const processOrders = (order) =>{
     let discount = total > 50 ? total * 0.10 : 0;
     total -= discount;
 
+    // apply tax
+    let tax = total * 0.08;
+    total += tax;
+
     return {
         discount: discount.toFixed(2),
-        total: total.toFixed(2)
-    }
-}
+        total: total.toFixed(2),
+        tax: tax.toFixed(2)
+    };
+};
 
 processOrders()
 console.log(processOrders(order))
