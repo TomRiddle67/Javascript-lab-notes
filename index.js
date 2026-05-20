@@ -1,15 +1,25 @@
-const variable = "property";
+//objects as data structure
 
-const object = {
-property: "Value",
-otherProperty: 77,
-"obnoxiousProperty": function ()
-{
-//do something
-},
+//without objects
+const playerOneName = "Tom";
+const playerTwoName = "Doris";
+const playerOneMarker = "X";
+const playerTwomarker = "O"
+
+//with objects
+const playerOne = {
+	name: "Tom",
+	marker: "X",
 };
 
-//getting a property
-console.log (object["obnoxiousProperty"]);
-console.log (object.property);
-console.log (object[variable]);
+const playerTwo = {
+	name: "Doris",
+	marker: "O",
+};
+
+function gameOver(winningPlayer) {
+	console.log(`congratulations ${winningPlayer.name} is the winner!`)
+};
+
+gameOver(playerOne);
+
