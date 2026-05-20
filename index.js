@@ -1,15 +1,21 @@
-const variable = "property";
+//objects as a design pattern
 
-const object = {
-property: "Value",
-otherProperty: 77,
-"obnoxiousProperty": function ()
-{
-//do something
-},
+const car = {
+	make: "Volvo",
+	model: "electric",
+	year: 2020,
+	color : "Red",
+	priceUSD : 3000,
+
+	applyDiscount: function (discount) {
+	const multiplier = 1 - discount / 100;
+	this.priceUSD *= multiplier;
+	return "enjoy discount!" },
+
+	summary: function (){
+	return`${this.make} ${this.model} ${this.year} ${this.color} in
+	${this.color} priced at $${this.priceUSD} (USD).`},
 };
+console.log(car.applyDiscount(10));
 
-//getting a property
-console.log (object["obnoxiousProperty"]);
-console.log (object.property);
-console.log (object[variable]);
+console.log(car.summary ());
