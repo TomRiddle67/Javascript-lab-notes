@@ -1,15 +1,14 @@
-function Player (name, marker) {
-	this.name = name;
-	this.marker = marker;
-	this.sayName = function () {
-	console.log(this.name)
-};
+function Book (title, author, pages) {
+	this.title = title;
+	this.author = author;
+	this.pages = pages;
+	this.info = function () {
+	return `${this.title} by ${this.author}, ${this.pages} pages`;
+}
 }
 
-const player1 = new Player ("Tom","O");
-const player2 = new Player ("also Tom", "X");
-player1.sayName ();
-player2.sayName ();
+const book1 = new Book ("Game of Thrones", "G.R Martin", 120);
+console.log(book1.info());
 
 
 
