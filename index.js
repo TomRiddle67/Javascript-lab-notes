@@ -1,21 +1,45 @@
-//objects as a design pattern
+//objects for abstract concepts
 
-const car = {
-	make: "Volvo",
-	model: "electric",
-	year: 2020,
-	color : "Red",
-	priceUSD : 3000,
+const rps = {
+	playerScore: 0,
+	computerScore: 0,
+	
+	playRound (playerChoice) {
+		for (choice in playerChoice) {
+			if (playerChoice === "rock") {
+				if (computerChoice === "rock") {
+					return "It's a tie!";
+				} else if (computerChoice === "paper") {
+					this.computerScore++;
+					return "You lose! Paper beats rock.";
+				} else {
+					this.playerScore++;
+					return "You win! Rock beats scissors.";
+				}
+		}
+	
+	},
+	
+	getWinner(){
+	
+	},
+	
+	reset(){
 
-	applyDiscount: function (discount) {
-	const multiplier = 1 - discount / 100;
-	this.priceUSD *= multiplier;
-	return "enjoy discount!" },
+	},
 
-	summary: function (){
-	return`${this.make} ${this.model} ${this.year} ${this.color} in
-	${this.color} priced at $${this.priceUSD} (USD).`},
 };
-console.log(car.applyDiscount(10));
 
-console.log(car.summary ());
+rps.playRound("rock");
+console.log(rps.playerScore);
+rps.playRound("rock");
+console.log(rps.playerScore);
+rps.playRound("scissors");
+console.log(computerScore);
+
+console.log(rps.getWinner());
+
+rps.reset();
+
+console.log(rps.playerScore);
+console.log (rps.computerScore);
