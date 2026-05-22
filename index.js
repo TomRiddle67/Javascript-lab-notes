@@ -1,45 +1,14 @@
-//objects for abstract concepts
+function Book (title, author, pages) {
+	this.title = title;
+	this.author = author;
+	this.pages = pages;
+	this.info = function () {
+	return `${this.title} by ${this.author}, ${this.pages} pages`;
+}
+}
 
-const rps = {
-	playerScore: 0,
-	computerScore: 0,
-	
-	playRound (playerChoice) {
-		for (choice in playerChoice) {
-			if (playerChoice === "rock") {
-				if (computerChoice === "rock") {
-					return "It's a tie!";
-				} else if (computerChoice === "paper") {
-					this.computerScore++;
-					return "You lose! Paper beats rock.";
-				} else {
-					this.playerScore++;
-					return "You win! Rock beats scissors.";
-				}
-		}
-	
-	},
-	
-	getWinner(){
-	
-	},
-	
-	reset(){
+const book1 = new Book ("Game of Thrones", "G.R Martin", 120);
+console.log(book1.info());
 
-	},
 
-};
 
-rps.playRound("rock");
-console.log(rps.playerScore);
-rps.playRound("rock");
-console.log(rps.playerScore);
-rps.playRound("scissors");
-console.log(computerScore);
-
-console.log(rps.getWinner());
-
-rps.reset();
-
-console.log(rps.playerScore);
-console.log (rps.computerScore);
