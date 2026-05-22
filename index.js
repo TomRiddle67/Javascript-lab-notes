@@ -1,45 +1,15 @@
-//objects for abstract concepts
-
-const rps = {
-	playerScore: 0,
-	computerScore: 0,
-	
-	playRound (playerChoice) {
-		for (choice in playerChoice) {
-			if (playerChoice === "rock") {
-				if (computerChoice === "rock") {
-					return "It's a tie!";
-				} else if (computerChoice === "paper") {
-					this.computerScore++;
-					return "You lose! Paper beats rock.";
-				} else {
-					this.playerScore++;
-					return "You win! Rock beats scissors.";
-				}
-		}
-	
-	},
-	
-	getWinner(){
-	
-	},
-	
-	reset(){
-
-	},
-
+function Player (name, marker) {
+	this.name = name;
+	this.marker = marker;
+	this.sayName = function () {
+	console.log(this.name)
 };
+}
 
-rps.playRound("rock");
-console.log(rps.playerScore);
-rps.playRound("rock");
-console.log(rps.playerScore);
-rps.playRound("scissors");
-console.log(computerScore);
+const player1 = new Player ("Tom","O");
+const player2 = new Player ("also Tom", "X");
+player1.sayName ();
+player2.sayName ();
 
-console.log(rps.getWinner());
 
-rps.reset();
 
-console.log(rps.playerScore);
-console.log (rps.computerScore);
